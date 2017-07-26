@@ -1,0 +1,133 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/earlyaccess/notosanskr.css");
+
+* {
+	font-family: "Noto Sans KR", "Helvetica Neue", sans-serif;
+}
+
+body {
+  background-color: #FDFDFD;
+}
+
+header {
+  position: relative;
+  height: 300px;
+  margin-bottom: 100px;
+  background-color: #333333;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+}
+
+h1 {
+  height: 300px;
+  margin: 0;
+  padding-top: 120px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+p, .p, li {
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+p > span {
+  color: #777777;
+}
+
+li {
+  color: #777777;
+}
+
+em {
+  font-style: normal;
+  font-weight: 400;
+  color: #333333;
+}
+
+a {
+  color: #21A171;
+}
+
+h1 > a {
+  color: #FFFFFF !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.gray {
+  color: #777777;
+}
+
+.red {
+  color: #D16171;
+}
+
+.times {
+  font-family: Times New Roman, Times;
+}
+
+.profile-wrap {
+  position: absolute;
+  top: 200px;
+  width: 100%;
+}
+
+.profile-wrap .inline {
+  width: 200px;
+  height: 200px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+}
+
+.profile {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #FDFDFD;
+}
+
+.container {
+  max-width: 620px;
+  font-size: 16px;
+  line-height: 1.75em;
+}
+
+hr {
+  margin: 30px 0;
+}
+
+section:first-child {
+  margin-top: 10px;
+}
+
+section:last-child {
+  margin-bottom: 30px;
+}
+
+h3 {
+  margin-bottom: 20px;
+}
+
+h3 > span {
+  padding-bottom: 6px;
+  border-bottom: 3px solid #882233;
+  color: #993344;
+  line-height: 1.5em;
+}
+
+@media screen and (min-width: 50em) {
+  header {
+    height: 500px;
+  }
+  h1 {
+    height: 500px;
+    padding-top: 320px;
+  }
+  .profile-wrap {
+    top: 400px;
+  }
+}

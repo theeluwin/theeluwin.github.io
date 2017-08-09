@@ -30,6 +30,10 @@ h1 {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+p {
+	margin: 0 0 12px;
+}
+
 p, .p, li {
   font-weight: 300;
   line-height: 1.5em;
@@ -37,6 +41,10 @@ p, .p, li {
 
 p > span {
   color: #777777;
+}
+
+p > i {
+	color: #BBBBBB;
 }
 
 li {

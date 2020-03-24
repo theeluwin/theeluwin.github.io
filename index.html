@@ -401,23 +401,23 @@
           <br />
           Here's a list for the best games of my life (emojis stand for 100% completion):
           <ul>
-            <li>1996 - ⭐ Super Mario 64</li>
-            <li>1998 - 🕷️ Legend of Zelda: Ocarina of Time</li>
-            <li>2000 - 👩‍❤️‍👨 Legend of Zelda: Majora's Mask</li>
-            <li>2001 - 🏆 Final Fantasy X</li>
+            <li>1996 - Super Mario 64 ⭐</li>
+            <li>1998 - Legend of Zelda: Ocarina of Time 🕷️</li>
+            <li>2000 - Legend of Zelda: Majora's Mask 👩‍❤️‍👨</li>
+            <li>2001 - Final Fantasy X 🏆</li>
             <li>2002 - Kingdom Hearts</li>
             <li>2005 - Kingdom Hearts II</li>
-            <li>2006 - 🦋 Legend of Zelda: Twilight Princess</li>
-            <li>2009 - 🏆 Final Fantasy XIII</li>
+            <li>2006 - Legend of Zelda: Twilight Princess 🦋</li>
+            <li>2009 - Final Fantasy XIII 🏆</li>
             <li>2011 - Legend of Zelda: Skyward Sword</li>
             <li>2013 - The Last of Us</li>
-            <li>2015 - 💖 Undertale</li>
+            <li>2015 - Undertale 💖</li>
             <li>2016 - Final Fantasy XV</li>
-            <li>2017a - 🏆 Nier: Automata</li>
-            <li>2017b - 🌙 Super Mario Odyssey</li>
-            <li>2018a - 🌱 Legend of Zelda: Breath of the Wild</li>
-            <li>2018b - Celeste</li>
-            <li>2019 - 💬 Fire Emblem: Three Houses</li>
+            <li>2017 - Nier: Automata 🏆</li>
+            <li>2017 - Super Mario Odyssey 🌙</li>
+            <li>2018 - Legend of Zelda: Breath of the Wild 🌱</li>
+            <li>2018 - Celeste 🌙🍓 <b id="wow">wow</b></li>
+            <li>2019 - Fire Emblem: Three Houses 💬</li>
           </ul>
         </div>
       </section>
@@ -426,5 +426,57 @@
         <p class="text-center">&copy; theeluwin 2020</p>
       </section>
     </div>
+    <script>
+      let interval = 15
+      let wow = document.getElementById('wow')
+      let hex = ['00', '14', '28', '3C', '50', '64', '78', '8C', 'A0', 'B4', 'C8', 'DC', 'F0']
+      let r = 1
+      let g = 1
+      let b = 1
+      let seq=1
+      function change(){
+        if(seq === 6) {
+          b = b - 1
+          if(b === 0) {
+            seq = 1
+          }
+        }
+        if(seq === 5) {
+          r = r + 1
+          if(r === 12) {
+            seq = 6
+          }
+        }
+        if(seq === 4) {
+          g = g - 1
+          if(g === 0) {
+            seq = 5
+          }
+        }
+        if(seq === 3) {
+          b = b + 1
+          if(b === 12) {
+            seq = 4
+          }
+        }
+        if(seq === 2) {
+          r = r - 1
+          if(r === 0) {
+            seq = 3
+          }
+        }
+        if(seq === 1) {
+          g = g + 1
+          if(g === 12) {
+            seq = 2
+          }
+        }
+        rainbow = "#" + hex[r] + hex[g] + hex[b]
+        wow.style.color = rainbow
+      }
+      setInterval(function(){
+        change()
+      }, interval)
+    </script>
   </body>
 </html>

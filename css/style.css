@@ -31,7 +31,7 @@ h1 {
 }
 
 p {
-	margin: 0 0 12px;
+	margin: 0 0 15px;
 }
 
 p, .p, li {
@@ -54,7 +54,7 @@ li {
 em {
   font-style: normal;
   font-weight: 400;
-  color: #333333;
+  color: #337AB7;
 }
 
 a {
@@ -99,7 +99,7 @@ h1 > a {
 }
 
 .container {
-  max-width: 620px;
+  max-width: 640px;
   font-size: 16px;
   line-height: 1.75em;
 }

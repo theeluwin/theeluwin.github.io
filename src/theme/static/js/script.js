@@ -1,6 +1,7 @@
 const wow = () => {
   const interval = 15
   const dom = document.getElementById('wow')
+  if (!dom) return
   const hex = ['00', '14', '28', '3C', '50', '64', '78', '8C', 'A0', 'B4', 'C8', 'DC', 'F0']
   let r = 1
   let g = 1

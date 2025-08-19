@@ -1,0 +1,99 @@
+<nav class="navbar bg-body-tertiary fixed-top" data-bs-theme="dark">
+  <div class="container">
+    <a class="navbar-brand" href="{{ SITEURL }}">{{ SITENAME }}</a>
+    <button
+      class="navbar-toggler d-lg-none"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvas-navbar"
+      aria-controls="offcanvas-navbar"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      id="offcanvas-navbar"
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      aria-labelledby="offcanvas-navbar-label"
+    >
+      <div class="offcanvas-header">
+        <h5
+          id="offcanvas-navbar-label"
+          class="offcanvas-title"
+        >
+          Menu
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a
+              class="nav-link{% if not article and not category and not tag %} active{% endif %}"
+              {% if not article and not category and not tag %}aria-current="page"{% endif %}
+              href="{{ SITEURL }}"
+            >
+              Home
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle{% if category %} active{% endif %}"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              {% if tag %}aria-current="page"{% endif %}
+            >
+              Categories
+            </a>
+            <ul class="dropdown-menu show">
+              {% for c, _ in (categories | sort) %}
+                <li>
+                  <a
+                    class="dropdown-item{% if (category and category == c) or (article and article.category and article.category == c) %} active{% endif %}"
+                    href="{{ SITEURL }}/{{ c.url }}"
+                    {% if (category and category == c) or (article and article.category and article.category == c) %}aria-current="page"{% endif %}
+                  >
+                    {{ c }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle{% if tag %} active{% endif %}"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              {% if tag %}aria-current="page"{% endif %}
+            >
+              Tags
+            </a>
+            <ul class="dropdown-menu show">
+              {% for t, _ in (tags | sort) %}
+                <li>
+                  <a
+                    class="dropdown-item{% if (tag and tag == t) or (article and article.tags and t in article.tags) %} active{% endif %}"
+                    href="{{ SITEURL }}/{{ t.url }}"
+                    {% if (tag and tag == t) or (article and article.tags and t in article.tags) %}aria-current="page"{% endif %}
+                  >
+                    {{ t }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,11 @@
+[project]
+name = "blog"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pelican-sitemap>=1.2.1",
+    "pelican[markdown]>=4.11.0",
+    "pygments>=2.18.0",
+]

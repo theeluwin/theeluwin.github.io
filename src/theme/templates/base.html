@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>
+      {% block title %}{{ SITENAME }}{% endblock %}
+      {% block title_extra %}{% endblock %}
+    </title>
+    {% include "components/meta.html" %}
+    {% include "components/css.html" %}
+    {% block head_extra %}{% endblock %}
+  </head>
+  <body>
+    {% include "components/header.html" %}
+    <div id="container" class="container">
+      <div class="row">
+        <div class="col-lg-2 d-none d-lg-block">
+          {% include "components/nav.html" %}
+        </div>
+        <div class="col-md-2 d-lg-none"></div>
+        <div class="col-lg-8 col-md-8 col-sm-12">
+          {% block content %}{% endblock %}
+        </div>
+      </div>
+    </div>
+    {% include "components/footer.html" %}
+    {% include "components/js.html" %}
+    {% block js_extra %}{% endblock %}
+  </body>
+</html>

@@ -1,0 +1,38 @@
+{% if GOOGLE_ANALYTICS_ID %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ GOOGLE_ANALYTICS_ID }}"></script>
+  <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '{{ GOOGLE_ANALYTICS_ID }}');</script>
+{% endif %}
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="author" content="{{ AUTHOR }}" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#ffffff" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:type" content="website" />
+<meta http-equiv="Content-Language" content="{{ DEFAULT_LANG }}" />
+<link rel="icon" href="{{ SITEURL }}/favicon.ico" />
+<link rel="apple-touch-icon" href="{{ SITEURL }}/favicon.ico" />
+{% if article is defined %}
+  <link rel="canonical" href="{{ SITEURL }}/{{ article.url }}" />
+  <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
+  <meta name="description" content="{{ article.summary | striptags | escape }}" />
+  <meta name="twitter:title" content="{{ article.title | striptags | escape }}" />
+  <meta name="twitter:description" content="{{ article.summary | striptags | escape }}" />
+  <meta property="og:title" content="{{ article.title | striptags | escape }}" />
+  <meta property="og:description" content="{{ article.summary | striptags | escape }}" />
+  <meta name="twitter:image" content="{{ SITEURL }}/images/thumbnail.jpg" />
+  <meta property="og:image" content="{{ SITEURL }}/images/thumbnail.jpg" />
+  {% for tag in article.tags %}
+    <meta name="tags" content="{{ tag }}" />
+  {% endfor %}
+{% else %}
+  <link rel="canonical" href="{{ SITEURL }}/" />
+  <meta property="og:url" content="{{ SITEURL }}/" />
+  <meta name="description" content="{{ SITEDESCRIPTION | striptags | escape }}" />
+  <meta name="twitter:title" content="{{ SITENAME }}" />
+  <meta name="twitter:description" content="{{ SITEDESCRIPTION | striptags | escape }}" />
+  <meta property="og:title" content="{{ SITENAME }}" />
+  <meta property="og:description" content="{{ SITEDESCRIPTION | striptags | escape }}" />
+  <meta property="twitter:image" content="{{ SITEURL }}/images/thumbnail.jpg" />
+  <meta property="og:image" content="{{ SITEURL }}/images/thumbnail.jpg" />
+{% endif %}

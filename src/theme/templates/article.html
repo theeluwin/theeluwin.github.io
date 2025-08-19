@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title_extra %} - {{ article.title | striptags }}{% endblock %}
+{% block js_extra %}
+  {% include "components/mathjax.html" %}
+{% endblock %}
+{% block content %}
+  <article class="article-page">
+    <header>
+      <h2>
+        <a
+          href="{{ SITEURL }}/{{ article.url }}"
+          class="silent-link"
+        >
+          {{ article.title }}
+        </a>
+      </h2>
+    </header>
+    <main>
+      {{ article.content }}
+    </main>
+    <footer>
+      <span class="badge bg-secondary-subtle text-dark">
+        <time datetime="{{ article.date.isoformat() }}">
+          {{ article.locale_date }}
+        </time>
+      </span>
+      {% for tag in article.tags %}
+        <span class="badge rounded-pill text-bg-dark">
+          <a
+            href="{{ SITEURL }}/{{ tag.url }}"
+            class="text-decoration-none text-light"
+          >
+            {{ tag }}
+          </a>
+        </span>
+      {% endfor %}
+    </footer>
+  </article>
+{% endblock %}

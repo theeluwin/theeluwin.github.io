@@ -1,0 +1,147 @@
+/* global */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 56px;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+/* override */
+.container {
+    max-width: 1080px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.offcanvas {
+    transition: none;
+}
+.offcanvas-backdrop {
+    transition: none;
+}
+.nav-underline .nav-link {
+    border-bottom: none !important;
+    font-weight: 600;
+}
+.nav-underline .nav-link.active {
+    font-weight: 600;
+}
+.highlight {
+    padding: 8px;
+}
+.highlight pre {
+    margin-bottom: 0;
+}
+mjx-container {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* utilities */
+.text-decoration-none {
+    text-decoration: none !important;
+}
+.silent-link {
+    color: #212529;
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+.silent-link.active {
+    color: #0D6EFD !important;
+}
+.silent-link:hover {
+    color: #0D6EFD !important;
+}
+
+/* custom: nav-nested */
+.nav-nested {
+    padding-left: 12px;
+}
+.nav-nested .nav-link {
+    padding-top: 8px;
+    padding-bottom: 0;
+    font-size: 15px;
+}
+
+/* custom: article-card */
+.article-card {
+    margin-bottom: 60px;
+    word-break: break-word;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.article-card header h4 {
+    margin-bottom: 0;
+}
+.article-card main {
+    margin-top: 6px;
+}
+.article-card footer {
+    margin-top: 6px;
+}
+
+/* custom: article-page */
+.article-page {
+    word-break: break-word;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.75;
+}
+.article-page h5 {
+    margin-bottom: 10px;
+}
+.article-page main {
+    margin-top: 40px;
+}
+.article-page footer {
+    margin-top: 40px;
+}
+.article-page code {
+    font-size: 15px;
+}
+.article-page b {
+    font-weight: 600;
+}
+.article-page strong {
+    font-weight: 600;
+}
+.article-page p:has(> img) {
+    text-align: center;
+}
+.article-page blockquote {
+    border: 1px solid #CCCCCC;
+    border-radius: 12px;
+    padding: 12px 18px;
+    font-size: 15px;
+    color: #555555;
+}
+.article-page blockquote p:last-child {
+    margin-bottom: 0;
+}
+.article-page hr {
+    margin: 40px 0;
+}
+
+/* custom: id components */
+#container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+#sidebar {
+    top: 96px;
+    padding-right: 20px;
+}
+#game {
+    font-size: 16px;
+}
+#game code {
+    font-size: 12px;
+}
+#game p {
+    margin-bottom: 10px;
+}
+#footer {
+    margin-top: auto;
+}

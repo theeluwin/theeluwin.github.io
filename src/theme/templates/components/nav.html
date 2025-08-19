@@ -1,0 +1,49 @@
+<ul id="sidebar" class="nav nav-underline flex-column">
+  <li class="nav-item">
+    <a
+      class="nav-link{% if not article and not category and not tag %} active{% endif %} silent-link"
+      href="{{ SITEURL }}"
+      {% if not article and not category and not tag %}aria-current="page"{% endif %}
+    >
+      Home
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-secondary">
+      Categories
+    </a>
+    <ul class="nav flex-column nav-nested">
+      {% for c, _ in (categories | sort) %}
+        <li class="nav-item">
+          <a
+            class="nav-link{% if (category and category.name == c.name) or (article and article.category and article.category.name == c.name) %} active{% endif %} silent-link"
+            href="{{ SITEURL }}/{{ c.url }}"
+            {% if (category and category.name == c.name) or (article and article.category and article.category.name == c.name) %}aria-current="page"{% endif %}
+          >
+            {{ c }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-secondary">
+      Tags
+    </a>
+    <ul class="nav flex-column nav-nested">
+      {% for t, _ in (tags | sort) %}
+        <li class="nav-item mt-1">
+          <span class="badge rounded-pill {% if (tag and tag.name == t.name) or (article and article.tags and t in article.tags) %}text-bg-dark{% else %}text-bg-light{% endif %}">
+            <a
+              href="{{ SITEURL }}/{{ t.url }}"
+              class="text-decoration-none {% if (tag and tag.name == t.name) or (article and article.tags and t in article.tags) %}text-light{% else %}text-dark{% endif %}"
+              {% if (tag and tag.name == t.name) or (article and article.tags and t in article.tags) %}aria-current="page"{% endif %}
+            >
+              {{ t }}
+            </a>
+          </span>
+        </li>
+      {% endfor %}
+    </ul>
+  </li>
+</ul>

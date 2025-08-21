@@ -28,6 +28,7 @@ body {
 }
 .highlight {
     padding: 8px;
+    margin-bottom: 1rem;
 }
 .highlight pre {
     margin-bottom: 0;
@@ -106,6 +107,9 @@ mjx-container {
 }
 .article-page strong {
     font-weight: 600;
+}
+.article-page img {
+    max-width: 100%;
 }
 .article-page p:has(> img) {
     text-align: center;

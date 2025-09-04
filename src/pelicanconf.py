@@ -47,6 +47,7 @@ ARCHIVES_SAVE_AS = ''
 STATIC_PATHS = [
     'articles',
     'images',
+    'pdfs',
     'extra',
 ]
 STATIC_EXCLUDE_SOURCES = True

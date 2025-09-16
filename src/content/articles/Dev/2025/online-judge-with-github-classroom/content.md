@@ -27,7 +27,7 @@ GitHub Classroom의 기본적인 구성 및 출제 흐름은 다음과 같습니
 
 저는 채점 코드를 숨기고 싶었기 때문에, private으로 채점 코드 repository를 과제 관리용 Organization에 만들고, 이를 학생용 Action에서 (비밀리에) checkout해서 채점을 돌리는 방식을 하려고 했습니다. 그런데 이때 Organization이 다르다보니, private repository의 접근 권한을 주기 위해서는 Personal Access Token (PAT)을 모든 학생용 repository에 발급해줘야해습니다. PAT는 starter code repository에 넣어놔도 fork할때 복사되지 않고, Organization 단위의 secret은 유료 플랜에서만 제공하는 기능이기 때문에, 결국 Organization을 분리하는건 포기했습니다.
 
-그런데 같은 Organization 내에서라도, private repository에 접근하려면 여전히 PAT는 필요합니다. 대신, Organization에서 배포한 Action이라면 private이라도 사용이 가능합니다! 저는 이 점을 이용해서 본격적으로 채점기를 만들기 시작했습니다.
+그런데 같은 Organization 내에서라도, private repository에 접근하려면 여전히 PAT는 필요합니다. 대신, Organization에서 배포한 Action이라면 private이라도 사용이 가능합니다! **단, 설정을 별도로 해줘야하고, private repo에서만 사용이 가능합니다**. 여하튼, 저는 이 점을 이용해서 본격적으로 채점기를 만들기 시작했습니다.
 
 ---
 

@@ -34,9 +34,9 @@ GitHub Classroom의 기본적인 구성 및 출제 흐름은 다음과 같습니
 Repository들의 구성은 아래와 같습니다. 예시 코드를 공유드립니다. 원래는 모두 private이어야 합니다.
 
 * [general-grader](https://github.com/DKU-IRDM-Classroom/general-cstdio-grader): 범용 채점기 (private)
-* [Assignment-Template](https://github.com/DKU-IRDM-Classroom/Test-Classroom-Test-Assignment-C): 과제 템플릿 (private)
+* [Assignment-Template](https://github.com/DKU-IRDM-Classroom/Test-C-Stdio): 과제 템플릿 (private)
 * `Assignment-Grader`: 과제 전용 채점기 (private)
-* [Assignment](https://github.com/DKU-IRDM-Classroom/Test-Classroom-Test-Assignment-C-Starter): 과제 템플릿에서 복사된 starter code (private)
+* [Assignment](https://github.com/DKU-IRDM-Classroom/Test-C-Stdio-starter): 과제 템플릿에서 복사된 starter code (private)
 * `Assignment-student`: starter code에서 fork된 학생 과제용 repository (private이지만 각 학생은 자기 repository에 접근이 가능)
 
 ---
